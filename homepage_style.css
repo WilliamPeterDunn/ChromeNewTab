@@ -1,0 +1,21 @@
+*{
+    color: white;
+}
+#greetingHeading{
+    margin-top: 0px;
+    font-size: 50px;
+    font-family: -apple-system, BlinkMacSystemFont, "Neue Haas Grotesk Text Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-align: center;
+}
+#currentTime{
+    margin-top: 80px;
+    margin-bottom: 0px;
+    font-size: 120px;
+    font-family: -apple-system, BlinkMacSystemFont, "Neue Haas Grotesk Text Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-align: center;
+}
+#message{
+    font-size: 60px;
+    font-family: -apple-system, BlinkMacSystemFont, "Neue Haas Grotesk Text Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-align: center;
+}
