@@ -5,3 +5,4 @@ To install:
 - enable developer mode
 - click load unpacked
 - select the folder containing downloaded files
+- add your name and inspirational messages to random_message.js

@@ -1,6 +1,6 @@
 function updateTime(){
 	
-	var username = 'user';
+	var username = 'William';
 	var today = new Date();
 	if(today.getMinutes() < 10){
 		  var time = today.getHours() + ":0" + today.getMinutes();

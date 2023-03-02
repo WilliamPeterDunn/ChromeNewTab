@@ -8,10 +8,54 @@
 		<title>New Tab</title>
 	</head>
 	<body style="background-image: url('./images/3ad1de40-4785-4e31-bd98-be80575c5553.jpg');">
+		
 		<h1 id="currentTime"> </h1>
 		<h1 id="greetingHeading"> </h1>
 		<h1 id="message"> </h1>
-		<script src="random_message.js"></script>
+		<div id='bookmarks'>
+			<div id="bookmarks_header">
+				BOOKMARKS
+				<span id="arrow_bookmarks">▼</span>
+			</div>
+			<div id="bookmarks_list" class='hide'>			    
+				Bookmarks here
+			</div>
+		</div>
+		
+		<div id="todo">
+			<div id="todo_header">			    
+				TO DO
+				<span id="arrow">▲</span>
+			</div>
+			<div id="tasks" class='hide'>
+			 <input type="checkbox" id="task1" name="task1">
+			  <label for="task1">Task 1</label><br>
+
+			  <input type="checkbox" id="task2" name="task2">
+			  <label for="task2">Task 2</label><br>
+
+			  <input type="checkbox" id="task3" name="task3">
+			  <label for="task3">Task 3</label><br>
+
+			  <input type="checkbox" id="task4" name="task4">
+			  <label for="task4">Task 4</label><br>
+
+			  <input type="checkbox" id="task5" name="task5">
+			  <label for="task5">Task 5</label><br>
+
+			  <input type="checkbox" id="task6" name="task6">
+			  <label for="task6">Task 6</label><br>
+
+			  <input type="checkbox" id="task7" name="task7">
+			  <label for="task7">Task 7</label><br>
+
+			  <input type="checkbox" id="task8" name="task8">
+			  <label for="task8">Task 8</label>
+			</div>
+		</div>
+		
 		<script src="time.js"></script>
+		<script src="random_message.js"></script>
+		<script src="todo_list.js"></script>
 	</body>
 </html>
