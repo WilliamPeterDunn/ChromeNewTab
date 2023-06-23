@@ -25,7 +25,9 @@ function updateTime(){
 		}
 		if(today.getHours() >= 16 && today.getHours() <= 24){
 		  greeting.innerHTML = greet3;
-		}
+		} else {
+		greeting.innerHTML = "Help my time is melting!";
+	}
 }
 
 setInterval(updateTime, 10);

@@ -9,9 +9,12 @@
 	</head>
 	<body style="background-image: url('./images/3ad1de40-4785-4e31-bd98-be80575c5553.jpg');">
 		
+		<div id='settings'><a href='#'>&#9881;</a></div>
 		<h1 id="currentTime"> </h1>
 		<h1 id="greetingHeading"> </h1>
 		<h1 id="message"> </h1>
+		<h2 id="attribution"></h2>
+		
 		<div id='bookmarks'>
 			<div id="bookmarks_header">
 				BOOKMARKS
@@ -19,6 +22,29 @@
 			</div>
 			<div id="bookmarks_list" class='hide'>			    
 				Bookmarks here
+			</div>
+		</div>
+		
+		<div id='finance'>
+			<div id="finance_header">
+				Settings
+				<span id="arrow_finance">▼</span>
+			</div>
+			<div id="finance_list" class='hide'>	
+				<label for="btn-add-quote">Add a custom quote</label>
+				<input type='textbox' id='newquote'>
+				<button id='btn-add-quote'>Add quote</button>			
+				
+			</div>
+		</div>
+		
+		<div id='goals'>
+			<div id="goals_header">
+				THE BIG PICTURE
+				<span id="arrow_goals">▲</span>
+			</div>
+			<div id="goals_list" class='hide'>			    				
+				Goals
 			</div>
 		</div>
 		
