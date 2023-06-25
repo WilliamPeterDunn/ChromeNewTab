@@ -4,13 +4,17 @@ chrome.runtime.onInstalled.addListener(function() {
     id: "copyQuote",
     title: "Copy quote",
     contexts: ["selection"]
-  });
+  }); 
 });
+
+const newQuoteInputBox = document.getElementById('newquote');
 
 // Perform the operation when the context menu item is clicked
 chrome.contextMenus.onClicked.addListener(function(info) {
   if (info.menuItemId === "copyQuote") {
     var highlightedText = info.selectionText;
     alert("Highlighted Text: " + highlightedText);
+	//newQuoteInputBox.value = "test";
+	
   }
 });
