@@ -4,17 +4,16 @@ chrome.runtime.onInstalled.addListener(function() {
     id: "copyQuote",
     title: "Copy quote",
     contexts: ["selection"]
-  }); 
+  });
 });
 
-const newQuoteInputBox = document.getElementById('newquote');
+chrome.action.onClicked.addListener(function() {
+  chrome.tabs.create({ url: "homepage.html" });
+});
 
-// Perform the operation when the context menu item is clicked
-chrome.contextMenus.onClicked.addListener(function(info) {
-  if (info.menuItemId === "copyQuote") {
-    var highlightedText = info.selectionText;
-    alert("Highlighted Text: " + highlightedText);
-	//newQuoteInputBox.value = "test";
-	
+chrome.runtime.onMessage.addListener(function(message, sender, sendResponse) {
+  if (message.text) {
+    var highlightedText = message.text;
+    console.log("Highlighted Text: " + highlightedText);
   }
 });
