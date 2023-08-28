@@ -3,12 +3,17 @@
   "name": "Custom new tab page",
   "version": "1.1",
   "description": "A custom new tab page for Chrome browser with random quotes",
-    "permissions": [
-		"scripting",
-		"tabs"
-	  ],  
+  "permissions": [
+    "scripting",
+    "tabs",
+    "contextMenus",
+    "activeTab"
+  ],
   "chrome_url_overrides": {
     "newtab": "homepage.html"
+  },
+  "background": {
+    "service_worker": "background.js"
   }
   
 }

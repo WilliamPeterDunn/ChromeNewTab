@@ -26,16 +26,28 @@
 		</div>
 		
 		<div id='finance'>
+		
 			<div id="finance_header">
 				Settings
 				<span id="arrow_finance">▼</span>
 			</div>
+			
 			<div id="finance_list" class='hide'>	
-				<label for="btn-add-quote">Add a custom quote</label>
-				<input type='textbox' id='newquote'>
-				<button id='btn-add-quote'>Add quote</button>			
+				<label for="newquotetext">Quote text</label>
 				
+				<input type='textbox' id='newquotetext'>
+				
+				<label for="newquoteattribution">Attribution</label>
+				<input type='textbox' id='newquoteattribution'>
+				
+				<button id='btn-add-quote'>Add quote</button></br>
+				
+				<label for="btnChangeName">Display name</label>
+				
+				<input type='textbox' id='changeName'>
+				<button id='btnChangeName'>Change name</button>				
 			</div>
+			
 		</div>
 		
 		<div id='goals'>
@@ -83,5 +95,6 @@
 		<script src="time.js"></script>
 		<script src="random_message.js"></script>
 		<script src="todo_list.js"></script>
+		<script src="homepage.js"></script>
 	</body>
 </html>
