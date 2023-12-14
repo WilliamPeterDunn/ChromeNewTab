@@ -14,6 +14,7 @@ fetch('https://webapp.williamdunn.za.net:8081/random-quote')
 
 // Send new quote to server
 const addButton = document.getElementById('btn-add-quote');
+const responseDiv = document.getElementById('response');
 
 function handleButtonClick() {
 	
@@ -21,16 +22,32 @@ function handleButtonClick() {
 	const attrib = document.getElementById('newquoteattribution').value;
 	const addQuoteURL = `https://webapp.williamdunn.za.net:8081/add-quote?quoteText=${text}&quoteAttribution=${attrib}`;
 	
+	if (document.getElementById('newquotetext').value == '' && document.getElementById('newquoteattribution').value == ''){
+		console.log('Abort - no content');	
+		responseDiv.textContent = 'Both fields must be supplied';
+		return;
+	}
+	
 	fetch(addQuoteURL)
 	  .then(response => response.json())
-	  .then(data => {  
-		
+	  .then(data => {  		
+		if (data["message"]){
+			responseDiv.textContent = data["message"];
+			document.getElementById('newquotetext').value = '';
+			document.getElementById('newquoteattribution').value = '';
+		}
+		else if (data["error"]){
+			responseDiv.textContent = data["error"];		
+	  } else {
+		  responseDiv.textContent = JSON.stringify(data);
+	  } 
 	  })
+	  
 	  .catch(error => {    
-		console.error('Error:', error);
+		console.log('Problemo');
+		console.error('error: ',error);
+		responseDiv.textContent = "Error";
 	  });
-    
-    console.log(addQuoteURL);	
     
 }
 

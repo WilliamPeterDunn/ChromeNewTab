@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Quote</title>
+    <script>
+        function openQuoteWindow() {
+            // Create a new window
+            const quoteWindow = window.open('', 'AddQuoteWindow', 'width=400,height=200');
+
+            // Set the title of the window
+            quoteWindow.document.title = 'Add Quote';
+
+            // Create HTML elements for the window content
+            const label1 = document.createElement('label');
+            label1.textContent = 'Quote:';
+            const input1 = document.createElement('input');
+            input1.type = 'text';
+
+            const label2 = document.createElement('label');
+            label2.textContent = 'Author:';
+            const input2 = document.createElement('input');
+            input2.type = 'text';
+
+            const submitButton = document.createElement('button');
+            submitButton.textContent = 'Submit Quote';
+            submitButton.onclick = function() {
+                // Get the values from the input fields
+                const quote = input1.value;
+                const author = input2.value;
+
+                // Do something with the quote and author values (e.g., display them)
+                alert('Quote: ' + quote + '\nAuthor: ' + author);
+
+                // Close the window
+                quoteWindow.close();
+            };
+
+            const cancelButton = document.createElement('button');
+            cancelButton.textContent = 'Cancel';
+            cancelButton.onclick = function() {
+                // Close the window
+                quoteWindow.close();
+            };
+
+            // Append elements to the window
+            quoteWindow.document.body.appendChild(label1);
+            quoteWindow.document.body.appendChild(input1);
+            quoteWindow.document.body.appendChild(document.createElement('br'));
+            quoteWindow.document.body.appendChild(label2);
+            quoteWindow.document.body.appendChild(input2);
+            quoteWindow.document.body.appendChild(document.createElement('br'));
+            quoteWindow.document.body.appendChild(submitButton);
+            quoteWindow.document.body.appendChild(cancelButton);
+        }
+    </script>
+</head>
+<body>
+    <button onclick="openQuoteWindow()">Open Quote Window</button>
+</body>
+</html>

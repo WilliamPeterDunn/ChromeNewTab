@@ -1,100 +1,190 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta http-equiv="X-UA-Compatible" content="ie=edge">
-		<link rel="stylesheet" href="homepage_style.css">
-		<title>New Tab</title>
-	</head>
-	<body style="background-image: url('./images/3ad1de40-4785-4e31-bd98-be80575c5553.jpg');">
-		
-		<div id='settings'><a href='#'>&#9881;</a></div>
-		<h1 id="currentTime"> </h1>
-		<h1 id="greetingHeading"> </h1>
-		<h1 id="message"> </h1>
-		<h2 id="attribution"></h2>
-		
-		<div id='bookmarks'>
-			<div id="bookmarks_header">
-				BOOKMARKS
-				<span id="arrow_bookmarks">▼</span>
-			</div>
-			<div id="bookmarks_list" class='hide'>			    
-				Bookmarks here
-			</div>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="homepage_style.css">
+	<link rel="stylesheet" href="test.css">
+
+    <script src="loadshedding.js"></script>
+	<title>New Tab</title>
+</head>
+
+<body style="background-image: url('./images/3ad1de40-4785-4e31-bd98-be80575c5553.jpg');">
+
+	<div id='settings'><a href='#'>&#9881;</a></div>
+	<h1 id="currentTime"> </h1>
+	<h1 id="greetingHeading"><span id='myname'></span></h1>
+	<h1 id="message"> </h1>
+	<h2 id="attribution"></h2>
+
+	<div id="LoadSheddingInfoBox">
+		<p>Loadshedding status for myarea</p>
+		<p>Next loadshedding is today at (in x hours)</p>
+		<p>Loadshedding in progress until</p>
+		<p id="lsinfobox"></p>
+	</div>
+
+	<div id='bookmarks'>
+		<div id="bookmarks_header">
+			Load shedding
+			<span id="arrow_bookmarks">▼</span>
 		</div>
-		
-		<div id='finance'>
-		
-			<div id="finance_header">
-				Settings
-				<span id="arrow_finance">▼</span>
-			</div>
-			
-			<div id="finance_list" class='hide'>	
-				<label for="newquotetext">Quote text</label>
-				
-				<input type='textbox' id='newquotetext'>
-				
-				<label for="newquoteattribution">Attribution</label>
-				<input type='textbox' id='newquoteattribution'>
-				
-				<button id='btn-add-quote'>Add quote</button></br>
-				
-				<label for="btnChangeName">Display name</label>
-				
-				<input type='textbox' id='changeName'>
-				<button id='btnChangeName'>Change name</button>				
-			</div>
-			
+		<div id="bookmarks_list" class='hide'>
+
+			<div id="checkbox-container">
+				<div class="checkbox-row">
+					<input type="checkbox" id="infobox-checkbox" checked="true" class="checkbox">
+					<label for="infobox-checkbox">Show info box</label>
+ 			    </div>
+			  				
+				<div class="checkbox-row">
+				  <input type="checkbox" id="allowance-checkbox" class="checkbox">
+				  <label for="allowance-checkbox">Allowance</label>
+				  <input type='textbox' id='update'>
+				  <input type='textbox' id='update'>
+				</div>
+
+
+				<div class="checkbox-row">
+				  <input type="checkbox" id="status-checkbox" class="checkbox">
+				  <label for="status-checkbox">Status</label>
+				  <input type='textbox' id='update'>
+				  <input type='textbox' id='update'>
+				</div>
+			  
+				<div class="checkbox-row">
+				  <input checked type="checkbox" id="area-info-checkbox" class="checkbox">
+				  <label for="area-info-checkbox">Area Information</label>
+				  <input type='textbox' id='update'>
+				  <input type='textbox' id='update'>
+				</div>
+			  </div>
+			  <div id="lss-options">
+				<label for="areaId">Area ID</label>
+				<input type='textbox' id='areaId'>
+
+				<label for="topicsLoc">Topics location</label>
+				<input type='textbox' id='topicsLoc'>
+
+				<label for="refreshFreqCached">Refresh frequency (cached)</label>
+				<input type='textbox' id='refreshFreqCached'>								
+
+				<label for="refreshFreqLive">Refresh frequency (live)</label>
+				<input type='textbox' id='refreshFreqLive'>												
+			  </div>
+			  
+									  
 		</div>
-		
-		<div id='goals'>
-			<div id="goals_header">
-				THE BIG PICTURE
-				<span id="arrow_goals">▲</span>
-			</div>
-			<div id="goals_list" class='hide'>			    				
-				Goals
-			</div>
+	</div>
+
+	
+
+	<div id='finance'>
+
+		<div id="finance_header">
+			Settings
+			<span id="arrow_finance">▼</span>
 		</div>
-		
-		<div id="todo">
-			<div id="todo_header">			    
-				TO DO
-				<span id="arrow">▲</span>
-			</div>
-			<div id="tasks" class='hide'>
-			 <input type="checkbox" id="task1" name="task1">
-			  <label for="task1">Task 1</label><br>
 
-			  <input type="checkbox" id="task2" name="task2">
-			  <label for="task2">Task 2</label><br>
+		<div id="finance_list" class='hide'>
 
-			  <input type="checkbox" id="task3" name="task3">
-			  <label for="task3">Task 3</label><br>
 
-			  <input type="checkbox" id="task4" name="task4">
-			  <label for="task4">Task 4</label><br>
+			<button id="openButton">Open Quote Window</button></br></br>
 
-			  <input type="checkbox" id="task5" name="task5">
-			  <label for="task5">Task 5</label><br>
+			<label for="btnChangeName">Display name</label>
 
-			  <input type="checkbox" id="task6" name="task6">
-			  <label for="task6">Task 6</label><br>
-
-			  <input type="checkbox" id="task7" name="task7">
-			  <label for="task7">Task 7</label><br>
-
-			  <input type="checkbox" id="task8" name="task8">
-			  <label for="task8">Task 8</label>
-			</div>
+			<input type='textbox' id='changeName'>
+			<button id='btnChangeName'>Change name</button>
 		</div>
-		
-		<script src="time.js"></script>
-		<script src="random_message.js"></script>
-		<script src="todo_list.js"></script>
-		<script src="homepage.js"></script>
-	</body>
+
+	</div>
+
+	<div id='goals'>
+		<div id="goals_header">
+			THE BIG PICTURE
+			<span id="arrow_goals">▲</span>
+		</div>
+		<div id="goals_list" class='hide'>
+			Goals
+		</div>
+	</div>
+
+	<div id="todo">
+		<div id="todo_header">
+			TO DO
+			<span id="arrow">▲</span>
+		</div>
+		<div id="tasks" class='hide'>
+			<input type="checkbox" id="task1" name="task1">
+			<label for="task1">Task 1</label><br>
+
+			<input type="checkbox" id="task2" name="task2">
+			<label for="task2">Task 2</label><br>
+
+			<input type="checkbox" id="task3" name="task3">
+			<label for="task3">Task 3</label><br>
+
+			<input type="checkbox" id="task4" name="task4">
+			<label for="task4">Task 4</label><br>
+
+			<input type="checkbox" id="task5" name="task5">
+			<label for="task5">Task 5</label><br>
+
+			<input type="checkbox" id="task6" name="task6">
+			<label for="task6">Task 6</label><br>
+
+			<input type="checkbox" id="task7" name="task7">
+			<label for="task7">Task 7</label><br>
+
+			<input type="checkbox" id="task8" name="task8">
+			<label for="task8">Task 8</label>
+		</div>
+	</div>
+
+
+	<!-- The overlay background -->
+	<div class="overlay" id="overlay"></div>
+
+	<!-- The modal dialog -->
+	<div id="myModal" class="modal">
+		<div class="modal-content">
+			<h2>Add Quote</h2>
+			<label for="newquotetext">Quote text</label>
+			<input type='textbox' id='newquotetext'>
+			<label for="newquoteattribution">Attribution</label>
+			<input type='textbox' id='newquoteattribution'></br></br>
+			<div id='response'></div>
+			<button id='btn-add-quote'>Add quote</button>
+			<button id="cancel">Cancel</button>
+		</div>
+	</div>
+
+	<div class="ticker-wrap">
+		<div class="ticker">
+		  		  
+			<div class="ticker__item">
+			  <div id="status"></div>
+			</div>
+
+			<div class="ticker__item">
+				<div id="allowance">  </div>
+			</div>
+
+			<div class="ticker__item">
+				<div id="areaInfo">  </div>
+			</div>			
+
+		</div>
+	</div>
+
+	<script src="time.js"></script>
+	<script src="random_message.js"></script>
+	<script src="addQuote.js"></script>
+	<script src="todo_list.js"></script>
+	<script src="homepage.js"></script>
+</body>
+
 </html>

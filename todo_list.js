@@ -18,7 +18,6 @@ bookmarks_header.addEventListener('click', function() {
 		arrow_bookmarks.classList.toggle('up');
 });
 
-
 const arrow_finance = document.getElementById('arrow_finance');
 const finance_list = document.getElementById('finance_list');
 const finance_header = document.getElementById('finance_header');

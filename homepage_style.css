@@ -1,238 +1,350 @@
-*{
-    color: white;
+* {
+	color: white;
 }
-#greetingHeading{
-    margin-top: 0px;
-    font-size: 40px;
-    font-family: -apple-system, BlinkMacSystemFont, "Neue Haas Grotesk Text Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    text-align: center;
+
+
+#greetingHeading {
+	margin-top: 0px;
+	font-size: 40px;
+	font-family: -apple-system, BlinkMacSystemFont, "Neue Haas Grotesk Text Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	text-align: center;
 }
-#currentTime{
-    margin-top: 80px;
-    margin-bottom: 0px;
-    font-size: 120px;
-    font-family: -apple-system, BlinkMacSystemFont, "Neue Haas Grotesk Text Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    text-align: center;
+
+#currentTime {
+	margin-top: 80px;
+	margin-bottom: 0px;
+	font-size: 120px;
+	font-family: -apple-system, BlinkMacSystemFont, "Neue Haas Grotesk Text Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	text-align: center;
 }
-#message{
-    font-size: 30px;
-    font-family: -apple-system, BlinkMacSystemFont, "Neue Haas Grotesk Text Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    text-align: center;
+
+#message {
+	font-size: 30px;
+	font-family: -apple-system, BlinkMacSystemFont, "Neue Haas Grotesk Text Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	text-align: center;
 }
-#attribution{
+
+#attribution {
 	font-size: 20px;
-    font-family: -apple-system, BlinkMacSystemFont, "Neue Haas Grotesk Text Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    text-align: center;
+	font-family: -apple-system, BlinkMacSystemFont, "Neue Haas Grotesk Text Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	text-align: center;
 }
-#todo{
-	display:none;
-	position:absolute;
-	bottom:0; 
-	right:0; 
-	width:300px; 
-	height:auto; 
-	background-color:black; 
-    opacity: 0.7;
-	border:1px solid white;
+
+#todo {
+	display: none;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	width: 300px;
+	height: auto;
+	background-color: black;
+	opacity: 0.7;
+	border: 1px solid white;
 	border-radius: 25px;
 	padding: 2px;
-	margin-bottom:15px;
-	margin-right:15px;
-    text-align: center;
+	margin-bottom: 15px;
+	margin-right: 15px;
+	text-align: center;
 	font-size: 20px;
 	overflow: hidden;
 }
 
-#tasks{
+#tasks {
 	text-align: left;
-	height:300px;
+	height: 300px;
 	transition: height 0.5s ease-out;
 }
 
 /* Set the height to 0 when the div element is hidden */
 #tasks.hide {
 	height: 0px;
-	}
+}
 
 input[type="checkbox"] {
-  margin-right: 10px;
+	margin-right: 10px;
 }
 
 label {
-  display: inline-block;
-  margin-bottom: 0px;
+	display: inline-block;
+	margin-bottom: 0px;
 }
 
 #todo_header {
-  cursor: pointer;
+	cursor: pointer;
 }
 
 #arrow {
-  display: inline-block;
-  margin-right: 5px;
-  transition: transform 0.7s ease-out;
+	display: inline-block;
+	margin-right: 5px;
+	transition: transform 0.7s ease-out;
 }
 
 #arrow.up {
-  padding-bottom: 3px;
-  transform: rotate(180deg);
+	padding-bottom: 3px;
+	transform: rotate(180deg);
 }
 
-#bookmarks{
-	display:none;
-	position:absolute;
-	top:0; 
-	left:0; 
-	width:300px; 
-	height:auto; 
-	background-color:black; 
-    opacity: 0.7;
-	border:1px solid white;
-	border-radius: 25px;
+#bookmarks {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 300px;
+	height: auto;
+	background-color: black;
+	opacity: 0.7;
+	border: 1px solid white;
+	border-radius: 5px;
 	padding: 2px;
-	margin-top:15px;
-	margin-left:15px;
-    text-align: center;
+	margin-top: 15px;
+	margin-left: 15px;
+	text-align: center;
 	font-size: 20px;
 	overflow: hidden;
 }
 
-#bookmarks_list{
+#bookmarks_list {
 	text-align: left;
-	height:300px;
+	height: 300px;
 	transition: height 0.5s ease-out;
+	font-size: 12px;
 }
 
 /* Set the height to 0 when the div element is hidden */
 #bookmarks_list.hide {
 	height: 0px;
-	}
-	
+}
+
 #bookmarks_header {
-  cursor: pointer;
+	cursor: pointer;
 }
 
 #arrow_bookmarks {
-  display: inline-block;
-  margin-right: 5px;
-  transition: transform 0.7s ease-out;
+	display: inline-block;
+	margin-right: 5px;
+	transition: transform 0.7s ease-out;
 }
 
 #arrow_bookmarks.up {
-  padding-bottom: 3px;
-  transform: rotate(180deg);
-}	
+	padding-bottom: 3px;
+	transform: rotate(180deg);
+}
 
 
-#finance{
-	--display:none;
-	position:absolute;
-	top:0; 
-	right:0; 
-	width:300px; 
-	height:auto; 
-	background-color:black; 
-    opacity: 0.7;
-	border:1px solid white;
-	border-radius: 25px;
+#finance {
+	--display: none;
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 300px;
+	height: auto;
+	background-color: black;
+	opacity: 0.7;
+	border: 1px solid white;
+	border-radius: 5px;
 	padding: 2px;
-	margin-top:15px;
-	margin-right:15px;
-    text-align: center;
+	margin-top: 15px;
+	margin-right: 15px;
+	text-align: center;
 	font-size: 20px;
 	overflow: hidden;
 }
 
-#finance_list{
+#finance_list {
 	text-align: left;
-	height:300px;
+	height: 300px;
 	transition: height 0.5s ease-out;
 }
 
 /* Set the height to 0 when the div element is hidden */
 #finance_list.hide {
 	height: 0px;
-	}
-	
+}
+
 #finance_header {
-  cursor: pointer;
+	cursor: pointer;
 }
 
 #arrow_finance {
-  display: inline-block;
-  margin-right: 5px;
-  transition: transform 0.7s ease-out;
+	display: inline-block;
+	margin-right: 5px;
+	transition: transform 0.7s ease-out;
 }
 
 #arrow_finance.up {
-  padding-bottom: 3px;
-  transform: rotate(180deg);
-}	
+	padding-bottom: 3px;
+	transform: rotate(180deg);
+}
+
 #btn-add-expense {
 	color: black;
 	margin: 2px;
 }
 
 
-#goals{
-	display:none;
-	position:absolute;
-	bottom:0; 
-	left:0;
-	width:300px; 
-	height:auto; 
-	background-color:black; 
-    opacity: 0.7;
-	border:1px solid white;
+#goals {
+	display: none;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 300px;
+	height: auto;
+	background-color: black;
+	opacity: 0.7;
+	border: 1px solid white;
 	border-radius: 25px;
 	padding: 2px;
-	margin-bottom:15px;
-	margin-left:15px;
-    text-align: center;
+	margin-bottom: 15px;
+	margin-left: 15px;
+	text-align: center;
 	font-size: 20px;
 	overflow: hidden;
 }
 
-#goals_list{
+#goals_list {
 	text-align: left;
-	height:300px;
+	height: 300px;
 	transition: height 0.5s ease-out;
 }
 
 /* Set the height to 0 when the div element is hidden */
 #goals_list.hide {
 	height: 0px;
-	}
-	
+}
+
 #goals_header {
-  cursor: pointer;
+	cursor: pointer;
 }
 
 #arrow_goals {
-  display: inline-block;
-  margin-right: 5px;
-  transition: transform 0.7s ease-out;
+	display: inline-block;
+	margin-right: 5px;
+	transition: transform 0.7s ease-out;
 }
 
 #arrow_goals.up {
-  padding-bottom: 3px;
-  transform: rotate(180deg);
+	padding-bottom: 3px;
+	transform: rotate(180deg);
 }
 
-#settings {	
+#settings {
 	display: none;
 	font-size: 30px;
-    font-family: -apple-system, BlinkMacSystemFont, "Neue Haas Grotesk Text Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    text-align: center;
+	font-family: -apple-system, BlinkMacSystemFont, "Neue Haas Grotesk Text Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	text-align: center;
 }
 
-a {text-decoration: none;}
+#LoadSheddingInfoBox {
+	background-color: rgba(0, 0, 0, 0.8);
+	border: 2px solid white; /* White border */
+	border-radius: 10px; /* Rounded corners */
+	padding: 15px; /* Padding for content inside the box */
+	width: 40%;
+	text-align: center;
+	position: absolute;
+            bottom: 0%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+}
 
-#btn-add-quote {
+a {
+	text-decoration: none;
+}
+
+button {
+	background-color: #007bff;
+	color: #fff;
+	border: none;
+	padding: 10px 20px;
+	cursor: pointer;
+	border-radius: 3px;
+}
+
+label {
+	font-size: 14px;
+	margin-bottom: 1px;
+	display: block;
+
+}
+
+input {
 	color: black;
 }
 
-label[for="btn-add-quote"] {
-	font-size: 14px;
-	margin-bottom: 1px;
+/* Styles for the modal */
+.modal {
+	display: none;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 300px;
+	background-color: #fff;
+	border-radius: 5px;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+	z-index: 1;
 }
+
+.modal-content {
+	background-color: #fff;
+	padding: 20px;
+	border-radius: 5px;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.form-group {
+	margin-bottom: 15px;
+}
+
+
+
+/* Styles for the overlay background */
+.overlay {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	z-index: 0;
+}
+
+.modal h2,
+.modal label,
+.modal div {
+	color: black;
+}
+
+.textbox {
+	width: 100%;
+	padding: 5px;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+}
+
+button {
+	background-color: #007bff;
+	color: #fff;
+	border: none;
+	padding: 10px 20px;
+	cursor: pointer;
+	border-radius: 3px;
+}
+
+button#cancel {
+	background-color: #ccc;
+	margin-top: 10px;
+}
+
+.checkbox-row {
+	display: flex;
+	align-items: center;
+	margin-bottom: 10px; /* Adjust the margin as needed */
+  }
+
+  .checkbox {
+	margin-right: 10px; /* Adjust the margin as needed */
+  }
+  
+  
